@@ -82,8 +82,8 @@ export const App = () => {
     <Grid container className={classes.root} spacing={1}>
       <Grid item xs={12}>
         <h3>
-          <a href="https://github.com/dgonz64/react-hook-form-auto">
-            react-hook-form-auto demo with Bootstrap 4
+          <a href="https://github.com/dgonz64/rhfa-material-ui">
+            react-hook-form-auto demo with Material-UI
           </a>
         </h3>
       </Grid>
