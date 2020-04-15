@@ -21,19 +21,11 @@ import { makeStyles } from '@material-ui/core/styles'
 import 'react-notifications/lib/notifications.css'
 import '../globals.css'
 
-const width = '90%'
-
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    '& .MuiTextField-root': {
-      width
-    },
-    '& .MuiSlider-root': {
-      width
-    },
     '& .MuiCard-root': {
-      maxWidth: width
+      maxWidth: '90%'
     }
   },
   paper: {
