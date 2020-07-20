@@ -60,7 +60,7 @@ const productionConfig = merge([
       maxAssetSize: 1200000
     },
     entry: {
-      vendor: ['brace', 'react']
+      vendor: ['react']
     },
 
     context: PATHS.app,
