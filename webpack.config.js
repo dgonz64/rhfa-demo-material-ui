@@ -1,7 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const glob = require('glob')
-const merge = require('webpack-merge')
+const { merge } = require('webpack-merge')
 
 const parts = require('./webpack.parts')
 
@@ -13,6 +13,8 @@ const PATHS = {
 
 const commonConfig = merge([
   {
+    target: 'web',
+    cache: false,
     entry: {
       app: PATHS.app,
     },
@@ -27,7 +29,6 @@ const commonConfig = merge([
       alias: {
         'react': path.resolve('node_modules', 'react'),
         'redux-form': path.resolve('node_modules', 'redux-form'),
-        'brace': path.resolve('node_modules', 'brace'),
         '@material-ui/core': path.resolve('node_modules', '@material-ui/core'),
         '@material-ui/icons': path.resolve('node_modules', '@material-ui/icons'),
       }
@@ -72,7 +73,7 @@ const productionConfig = merge([
       new webpack.HashedModuleIdsPlugin(),
     ],
   },
-  parts.clean(PATHS.build),
+  parts.clean(),
   parts.minifyJavascript(),
   parts.minifyCSS({
     options: {

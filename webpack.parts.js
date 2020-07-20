@@ -1,7 +1,7 @@
 const webpack = require('webpack')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const GitRevisionPlugin = require('git-revision-webpack-plugin')
 const BabiliPlugin = require('babili-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
@@ -30,8 +30,7 @@ exports.htmlPlugin = (add = {}) => ({
       ...add,
       title: 'react-hook-form-auto demo',
       template: require('html-webpack-template'),
-      appMountId: 'root',
-      inject: false
+      appMountId: 'root'
     })
   ]
 })
@@ -184,7 +183,7 @@ exports.generateSourceMaps = ({ type }) => ({
 
 exports.clean = (path) => ({
   plugins: [
-    new CleanWebpackPlugin([path])
+    new CleanWebpackPlugin()
   ]
 })
 
