@@ -27,7 +27,9 @@ const commonConfig = merge([
       alias: {
         'react': path.resolve('node_modules', 'react'),
         'redux-form': path.resolve('node_modules', 'redux-form'),
-        'brace': path.resolve('node_modules', 'brace')
+        'brace': path.resolve('node_modules', 'brace'),
+        '@material-ui/core': path.resolve('node_modules', '@material-ui/core'),
+        '@material-ui/icons': path.resolve('node_modules', '@material-ui/icons'),
       }
     },
   },

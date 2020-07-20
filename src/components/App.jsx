@@ -21,9 +21,19 @@ import { makeStyles } from '@material-ui/core/styles'
 import 'react-notifications/lib/notifications.css'
 import '../globals.css'
 
+const width = 230
+
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
+    '& .MuiTextField-root': {
+      minWidth: width,
+      width
+    },
+    '& .MuiSlider-root': {
+      minWidth: width,
+      width
+    },
     '& .MuiCard-root': {
       maxWidth: '90%'
     }
