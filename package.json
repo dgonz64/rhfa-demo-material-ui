@@ -17,7 +17,7 @@
     "hooks",
     "form",
     "auto",
-    "bootstrap4"
+    "material-ui"
   ],
   "author": "David González <braben@gmail.com>",
   "license": "MIT",
