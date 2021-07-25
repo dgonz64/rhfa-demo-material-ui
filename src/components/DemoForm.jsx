@@ -3,12 +3,19 @@ import {
   createSchema,
   addTranslations,
   translatable,
-  tr
+  tr,
+  FieldPropsOverride
 } from 'rhfa-material-ui'
 import { Button } from './Button'
 import { NotificationManager } from 'react-notifications'
 
 import { Autoform } from './Autoform'
+
+const initData = {}
+
+const onkeydown = e => {
+  console.log('some key event', e)
+}
 
 addTranslations({
   models: {
@@ -74,7 +81,12 @@ export const DemoForm = ({ code, config, onSubmit }) => {
           config={config}
           ref={formRef}
           onSubmit={handleSubmit}
-        />
+        >
+          <FieldPropsOverride
+            name="name"
+            onKeyDown={onkeydown}
+          />
+        </Autoform>
         <Button
           text={tr('submit')}
           onClick={handleImperativeSubmit}

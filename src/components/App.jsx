@@ -115,11 +115,9 @@ export const App = () => {
             onSubmit={handleSubmit}
             config={config}
           >
-            <div>
-              <Button type="submit">
-                Update
-              </Button>
-            </div>
+            <Button type="submit">
+              Update
+            </Button>
           </DemoConfig>
         </Panel>
         <Panel header="Form element" noMargin>

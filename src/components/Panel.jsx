@@ -8,7 +8,7 @@ export const Panel = ({ header, children }) =>
       <Typography color="textSecondary" gutterBottom>
         {header}
       </Typography>
-      <Typography variant="body2" component="p">
+      <Typography variant="body2" component="span">
         {children}
       </Typography>
     </CardContent>
